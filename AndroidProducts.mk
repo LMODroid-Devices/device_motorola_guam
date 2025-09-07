@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_guam.mk
+    $(LOCAL_DIR)/lmodroid_guam.mk
