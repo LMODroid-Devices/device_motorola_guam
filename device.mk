@@ -33,6 +33,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
+# LiveDisplay
+$(call soong_config_set,livedisplay_sysfs,enable_ab,true)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
