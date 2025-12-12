@@ -1,5 +1,5 @@
 #
-# SPDX-FileCopyrightText: 2022-2024 The LineageOS Project
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -37,9 +37,17 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,livedisplay_sysfs,enable_ab,true)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lmodroid
+PRODUCT_PACKAGES += \
+    FrameworksResDevice \
+    FrameworksResDeviceXT2081-4 \
+    LineagePlatformDevice \
+    SystemUIResDevice \
+    WifiResDevice \
+    WifiResDeviceXT2081-4
+
+# Properties
+PRODUCT_PACKAGES += \
+    hardware.sku.XT2081-4.prop
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 29
